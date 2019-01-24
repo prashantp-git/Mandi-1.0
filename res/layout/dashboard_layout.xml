@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/titlebarRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginRight="-2dp"
+        android:layout_marginTop="-2dp"
+        android:background="@drawable/titlebar_customui" >
+
+        <TextView
+            android:id="@+id/mandiTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:text="Mandi"
+            android:textColor="#cccccc"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/appTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/mandiTextView"
+            android:text="App2016"
+            android:textColor="#cccccc"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/appTextView"
+            android:layout_alignBottom="@+id/appTextView"
+            android:layout_marginLeft="31dp"
+            android:layout_toRightOf="@+id/appTextView"
+            android:text="Welcome"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#336699"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/farmerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/welcomeTextView"
+            android:layout_alignBottom="@+id/welcomeTextView"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/welcomeTextView"
+            android:text="farmer"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+             android:layout_marginRight="5dp"
+            android:layout_alignBottom="@+id/mandiTextView"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_profile" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlebarRelativeLayout" >
+      
+        <TextView
+            android:id="@+id/selectcategoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            android:text="Select Category"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+        
+  		<TextView
+            android:id="@+id/commwiseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="77dp"
+            android:text="Commodity Wise Price"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+        
+        <Spinner
+            android:id="@+id/commSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/commwiseTextView"
+            android:layout_below="@+id/commwiseTextView"
+            android:layout_marginLeft="-4dp" />
+
+         
+
+         <TextView
+             android:id="@+id/statewiseTextView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/commwiseTextView"
+             android:layout_below="@+id/commSpinner"
+             android:layout_marginTop="16dp"
+             android:text="State Wise Price"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textColor="#000000"
+             android:textSize="12dp" />
+
+         <Spinner
+             android:id="@+id/stateSpinner"
+             android:layout_width="wrap_content"
+             android:layout_height="40dp"
+             android:layout_alignLeft="@+id/commSpinner"
+             android:layout_below="@+id/statewiseTextView" />
+
+         <TextView
+             android:id="@+id/districtwiseTextView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/statewiseTextView"
+             android:layout_below="@+id/stateSpinner"
+             android:layout_marginTop="18dp"
+             android:text="District Wise Price"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textColor="#000000"
+             android:textSize="12dp" />
+
+         <Spinner
+             android:id="@+id/districtwiseSpinner"
+             android:layout_width="wrap_content"
+             android:layout_height="40dp"
+             android:layout_alignLeft="@+id/stateSpinner"
+             android:layout_below="@+id/districtwiseTextView" />
+
+		<Button
+		    android:id="@+id/button1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/stateSpinner"
+		    android:layout_centerHorizontal="true"
+		    android:layout_marginTop="107dp"
+		    android:text="Show" />
+
+		<EditText
+		    android:id="@+id/responseTextView"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignLeft="@+id/districtwiseTextView"
+		    android:layout_below="@+id/button1"
+		    android:layout_marginTop="16dp"
+		    android:ems="13"
+		    android:inputType="textMultiLine" >
+		    
+		</EditText>
+
+    </RelativeLayout>
+
+</RelativeLayout>

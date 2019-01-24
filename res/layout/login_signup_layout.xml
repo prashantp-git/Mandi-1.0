@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333366"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LoginSignUpActivity" >
+
+    <TextView
+        android:id="@+id/mandiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="50dp"
+        android:text="Mandi"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/appTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/usernameEditText"
+        android:layout_toRightOf="@+id/mandiTextView"
+        android:text="App2016"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#339999"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mandiTextView"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/edittext_customui"
+        android:ems="15"
+        android:fontFamily="sans-serif"
+        android:hint="Username"
+        android:textSize="15dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        android:layout_alignLeft="@+id/usernameEditText"
+        android:layout_alignRight="@+id/usernameEditText"
+        android:layout_below="@+id/usernameEditText"
+        android:background="@drawable/edittext_customui"
+        android:ems="15"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/passwordEditText"
+        android:layout_alignRight="@+id/usernameEditText"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_marginTop="10dp"
+        android:background="#009999"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/orTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/appTextView"
+        android:layout_below="@+id/loginButton"
+        android:layout_marginTop="10dp"
+        android:text="or"
+        android:textStyle="italic"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/loginButton"
+        android:layout_alignRight="@+id/loginButton"
+        android:layout_below="@+id/orTextView"
+        android:layout_marginTop="17dp"
+        android:background="#3399cc"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
